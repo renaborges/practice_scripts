@@ -1,0 +1,14 @@
+name: CI
+on: push
+
+jobs:
+  linux:
+    name: Linux build on node ${{ matrix.node_version }}
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Moving build to artifacts directory
+      run: ./news.sh
