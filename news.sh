@@ -1,6 +1,5 @@
 #!/bin/bash
 
-api_key="${{secret.api_key}}"
 
 if [ -z $api_key ]
 then
