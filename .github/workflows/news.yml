@@ -11,4 +11,4 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Running news script
-      run: api_key="${{secrets.api_key}}" ; ./news.sh
+      run: export api_key="${{secrets.api_key}}" ; ./news.sh
