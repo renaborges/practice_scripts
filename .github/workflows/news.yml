@@ -10,5 +10,5 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
 
-    - name: Moving build to artifacts directory
-      run: ./news.sh
+    - name: Running news script
+      run: api_key="${{secret.api_key}}" ; ./news.sh
