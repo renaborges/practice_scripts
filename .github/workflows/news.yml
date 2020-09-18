@@ -9,9 +9,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-    
-    - name: Install JQ
-      run: sudo apt-get update && sudo apt-get install jq -y
       
     - name: Running news script
-      run: export api_key="${{secrets.api_key}}" ; ./news.sh
+      run: export api_key="${{secrets.API_KEY}}" ; ./news.sh
